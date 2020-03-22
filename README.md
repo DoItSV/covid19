@@ -7,8 +7,8 @@ Proyecto salvadoreño hecho por el team DoItSV con el propósito de generar una 
 - PostgreSQL
 
 ## Install
-1 - `bundle install`
-2 - `rails db:create`
-3 - `rails db:migrate`
-4 - `rails db:seed`
-5 - `rails s`
+1) `bundle install`
+2) `rails db:create`
+3) `rails db:migrate`
+4) `rails db:seed`
+5) `rails s`
