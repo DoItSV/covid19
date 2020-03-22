@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: cities
+#
+#  id            :bigint           not null, primary key
+#  department_id :bigint           not null
+#  name          :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+one:
+  department: one
+  name: MyString
+
+two:
+  department: two
+  name: MyString

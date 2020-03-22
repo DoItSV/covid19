@@ -1,0 +1,93 @@
+<%= form_for @person, :html => { :class => "form-horizontal person" } do |f| %>
+
+  <% if @person.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @person.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @person.id.nil? %>
+    <div class="form-group">
+      <%= f.label :age, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+        <%= f.text_field :age, :class => 'form-control' %>
+      </div>
+      <%=f.error_span(:age) %>
+    </div>
+    <div class="form-group">
+      <%= f.label :sex, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+      </div>
+      <div class="col-lg-10">
+        <label class='control-label' style="text-align: left; font-weight: normal;">Masculino</label>
+        <%= f.radio_button :sex, :male, :class => 'form-control' %>
+        <label class='control-label' style="text-align: left; font-weight: normal;">Femenino</label>
+        <%= f.radio_button :sex, :female, :class => 'form-control' %>
+      </div>
+      <%=f.error_span(:sex) %>
+    </div>
+  <% else %>
+    <div class="form-group">
+      <div class="col-lg-10">
+        <%= collection_check_boxes(:person, :symptoms_ids, @symptoms, :id, :name) %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit 'Guardar', :class => 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
+
+<script>
+  // Get location of person
+  // reference: https://medium.com/better-programming/how-to-detect-the-location-of-your-websites-visitor-using-javascript-92f9e91c095f
+
+  function ipLookUp () {
+    $.ajax('http://ip-api.com/json')
+    .then(
+        function success(response) {
+            console.log('User\'s Location Data is ', response);
+            console.log('User\'s Country', response.country);
+            getAdress(response.lat, response.lon)
+        },
+
+        function fail(data, status) {
+            console.log('Request failed.  Returned status of',
+                        status);
+        }
+    );
+  }
+
+  if ("geolocation" in navigator) {
+    // check if geolocation is supported/enabled on current browser
+    navigator.geolocation.getCurrentPosition(
+      function success(position) {
+        // for when getting location is a success
+        console.log('latitude', position.coords.latitude, 
+                    'longitude', position.coords.longitude);
+      },
+      function error(error_message) {
+          // for when getting location results in an error
+          console.error('An error has occured while retrieving location', error_message)
+          ipLookUp()
+      }
+    );
+  }
+  else {
+    // geolocation is not supported; get your location some other way
+    console.log('geolocation is not enabled on this browser')
+    ipLookUp()
+  }
+</script>
