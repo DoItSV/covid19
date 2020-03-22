@@ -13,7 +13,9 @@
 ActiveRecord::Schema.define(version: 2020_03_22_175201) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "cities", force: :cascade do |t|
     t.bigint "department_id", null: false
