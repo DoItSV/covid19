@@ -17,25 +17,25 @@ ActiveRecord::Schema.define(version: 2020_03_22_175201) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "cities", force: :cascade do |t|
-    t.bigint "department_id", null: false
+  create_table "cities", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.uuid "department_id", null: false
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["department_id"], name: "index_cities_on_department_id"
   end
 
-  create_table "departments", force: :cascade do |t|
+  create_table "departments", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "people", force: :cascade do |t|
+  create_table "people", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.integer "age"
     t.integer "sex"
-    t.bigint "department_id", null: false
-    t.bigint "city_id", null: false
+    t.uuid "department_id", null: false
+    t.uuid "city_id", null: false
     t.integer "result"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -45,16 +45,16 @@ ActiveRecord::Schema.define(version: 2020_03_22_175201) do
     t.index ["department_id"], name: "index_people_on_department_id"
   end
 
-  create_table "person_symptoms", force: :cascade do |t|
-    t.bigint "person_id", null: false
-    t.bigint "symptom_id", null: false
+  create_table "person_symptoms", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.uuid "person_id", null: false
+    t.uuid "symptom_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["person_id"], name: "index_person_symptoms_on_person_id"
     t.index ["symptom_id"], name: "index_person_symptoms_on_symptom_id"
   end
 
-  create_table "symptoms", force: :cascade do |t|
+  create_table "symptoms", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string "name"
     t.integer "weight"
     t.datetime "created_at", precision: 6, null: false

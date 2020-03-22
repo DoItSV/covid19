@@ -26,7 +26,7 @@ class Person < ApplicationRecord
 
   before_update :process_symptoms, unless: :result
 
-  validates :age, :sex, :recent_trip, :contact_with_recent_trip, presence: true
+  #validates :age, :sex, :recent_trip, :contact_with_recent_trip, presence: true
 
   protected
 
