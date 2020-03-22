@@ -2,14 +2,16 @@
 #
 # Table name: people
 #
-#  id            :bigint           not null, primary key
-#  age           :integer
-#  sex           :integer
-#  department_id :bigint           not null
-#  city_id       :bigint           not null
-#  result        :integer
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
+#  id                       :bigint           not null, primary key
+#  age                      :integer
+#  sex                      :integer
+#  department_id            :bigint           not null
+#  city_id                  :bigint           not null
+#  result                   :integer
+#  created_at               :datetime         not null
+#  updated_at               :datetime         not null
+#  recent_trip              :boolean          default("false")
+#  contact_with_recent_trip :boolean          default("false")
 #
 class Person < ApplicationRecord
   belongs_to :department, optional: true
@@ -24,7 +26,7 @@ class Person < ApplicationRecord
 
   before_update :process_symptoms, unless: :result
 
-  validates :age, :sex, presence: true
+  validates :age, :sex, :recent_trip, :contact_with_recent_trip, presence: true
 
   protected
 

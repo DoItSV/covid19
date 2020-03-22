@@ -25,7 +25,7 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to edit_person_path(@person), notice: 'Person was successfully created.' }
+        format.html { redirect_to step2_path(@person), notice: 'Person was successfully created.' }
         format.json { render :show, status: :created, location: @person }
       else
         format.html { render :new }
@@ -39,7 +39,7 @@ class PeopleController < ApplicationController
   def update
     respond_to do |format|
       if @person.update(person_params)
-        format.html { redirect_to @person, notice: 'Person was successfully updated.' }
+        format.html { redirect_to result_path(@person), notice: 'Person was successfully updated.' }
         format.json { render :show, status: :ok, location: @person }
       else
         format.html { render :edit }
@@ -57,6 +57,6 @@ class PeopleController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def person_params
-    params.require(:person).permit(:age, :sex, symptoms_ids: [])
+    params.require(:person).permit(:age, :sex, :recent_trip, :contact_with_recent_trip, symptoms_ids: [])
   end
 end

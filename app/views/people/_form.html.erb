@@ -19,7 +19,7 @@
     <div class="form-group">
       <%= f.label :age, :class => 'control-label col-lg-2' %>
       <div class="col-lg-10">
-        <%= f.text_field :age, :class => 'form-control' %>
+        <%= f.number_field :age, min: 0, max: 110, :class => 'form-control' %>
       </div>
       <%=f.error_span(:age) %>
     </div>
@@ -34,6 +34,32 @@
         <%= f.radio_button :sex, :female, :class => 'form-control' %>
       </div>
       <%=f.error_span(:sex) %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label 'Has viajado recientemente?', :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+      </div>
+      <div class="col-lg-10">
+        <label class='control-label' style="text-align: left; font-weight: normal;">No</label>
+        <%= f.radio_button :recent_trip, 0, checked: true, :class => 'form-control' %>
+        <label class='control-label' style="text-align: left; font-weight: normal;">Si</label>
+        <%= f.radio_button :recent_trip, 1, :class => 'form-control' %>
+      </div>
+      <%=f.error_span(:recent_trip) %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label 'Has estado con contacto con  alguien que ha viajado recientemente?', :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+      </div>
+      <div class="col-lg-10">
+        <label class='control-label' style="text-align: left; font-weight: normal;">No</label>
+        <%= f.radio_button :contact_with_recent_trip, 0, checked: true, :class => 'form-control' %>
+        <label class='control-label' style="text-align: left; font-weight: normal;">Si</label>
+        <%= f.radio_button :contact_with_recent_trip, 1, :class => 'form-control' %>
+      </div>
+      <%=f.error_span(:contact_with_recent_trip) %>
     </div>
   <% else %>
     <div class="form-group">
