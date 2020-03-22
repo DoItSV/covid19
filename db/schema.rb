@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_22_175201) do
+ActiveRecord::Schema.define(version: 2020_03_22_185440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_03_22_175201) do
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "recent_trip", default: false
     t.boolean "contact_with_recent_trip", default: false
+    t.string "latitude"
+    t.string "longitude"
     t.index ["city_id"], name: "index_people_on_city_id"
     t.index ["department_id"], name: "index_people_on_department_id"
   end
