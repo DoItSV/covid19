@@ -1,0 +1,13 @@
+@import '../config/variables.scss';
+
+.button {
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+  border-radius: 4px;
+
+  &--primary {
+    background-color: $blue;
+    color: $white;
+  }
+}

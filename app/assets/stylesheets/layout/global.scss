@@ -1,0 +1,23 @@
+@import '../config/variables.scss';
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
+    local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light'),
+    local('Roboto-Light'), local('DroidSans'), local('Tahoma');
+}
+
+body {
+  font-family: 'system';
+  font-size: $small;
+  background-color: $white;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 0 1em;
+}

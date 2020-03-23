@@ -1,0 +1,28 @@
+@import '../config/variables.scss';
+
+.hero {
+  max-width: 32em;
+  margin: 0 auto;
+  padding: 4em 1em;
+
+  .logo {
+    width: 500px;
+    margin: 0 auto 2em;
+  }
+  .heading {
+    font-size: $giant;
+    font-weight: bolder;
+    margin: 0;
+    line-height: 1;
+  }
+  .description {
+    font-size: $medium;
+    margin: 1em 0;
+  }
+  .information {
+    background-color: rgba($blue, 0.1);
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+  }
+}
