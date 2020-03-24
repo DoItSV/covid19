@@ -29,16 +29,14 @@ class Person < ApplicationRecord
   attr_accessor :symptoms_ids
 
   before_update :process_symptoms, unless: :result
+  after_update :add_person_symptoms
 
   validates :age, :sex, presence: true
 
   protected
 
   def process_symptoms
-    symptoms = Symptom.where(id: symptoms_ids)
-    symptoms.each { |symptom| symptom.person_symptoms.create(person: self) }
-    symptoms_sum = symptoms.pluck(:weight).sum
-
+    symptoms_sum = Symptom.where(id: symptoms_ids).sum(:weight)
     symptoms_sum += 3 if recent_trip
     symptoms_sum += 2 if contact_with_recent_trip
 
@@ -53,5 +51,9 @@ class Person < ApplicationRecord
     end
 
     self.risk = Risk.find_by(key: result)
+  end
+
+  def add_person_symptoms
+    person_symptoms.create(symptoms_ids.collect { |sid| { symptom_id: sid } })
   end
 end
