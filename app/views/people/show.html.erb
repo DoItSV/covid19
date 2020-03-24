@@ -8,8 +8,10 @@
   <dd><%= @person.age %></dd>
   <dt><strong><%= model_class.human_attribute_name(:sex) %>:</strong></dt>
   <dd><%= @person.sex %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:result) %>:</strong></dt>
-  <dd><%= @person.result %></dd>
+  <dt><strong>Result:</strong></dt>
+  <dd><%= @person.risk.name %></dd>
+  <dt><strong>Description:</strong></dt>
+  <dd><%= @person.risk.description %></dd>
 </dl>
 
 

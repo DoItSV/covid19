@@ -2,8 +2,8 @@
 #
 # Table name: cities
 #
-#  id            :bigint           not null, primary key
-#  department_id :bigint           not null
+#  id            :uuid             not null, primary key
+#  department_id :uuid             not null
 #  name          :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
