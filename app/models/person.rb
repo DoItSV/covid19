@@ -26,12 +26,17 @@ class Person < ApplicationRecord
 
   before_update :process_symptoms, unless: :result
 
-  #validates :age, :sex, :recent_trip, :contact_with_recent_trip, presence: true
+  validates :age, :sex, presence: true
 
   protected
 
   def process_symptoms
-    symptoms_sum = Symptom.where(id: symptoms_ids).pluck(:weight).sum
+    symptoms = Symptom.where(id: symptoms_ids)
+    symptoms.each { |symptom| symptom.person_symptoms.create(person: self) }
+    symptoms_sum = symptoms.pluck(:weight).sum
+
+    symptoms_sum += 3 if recent_trip
+    symptoms_sum += 2 if contact_with_recent_trip
 
     self.result = begin
       if symptoms_sum <= 2
