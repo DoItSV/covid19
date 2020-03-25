@@ -18,3 +18,9 @@ if Department.count.zero?
   d3 = Department.create!(name: 'San Miguel')
   d3.cities.create(name: 'San Miguel')
 end
+
+if Risk.count.zero?
+  Risk.create!(name: 'Bajo', key: 'low', description: 'Desc1')
+  Risk.create!(name: 'Medio', key: 'medium', description: 'Desc2')
+  Risk.create!(name: 'Alto', key: 'high', description: 'Desc3')
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_22_185440) do
+ActiveRecord::Schema.define(version: 2020_03_24_062634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_03_22_185440) do
     t.boolean "contact_with_recent_trip", default: false
     t.string "latitude"
     t.string "longitude"
+    t.uuid "risk_id"
     t.index ["city_id"], name: "index_people_on_city_id"
     t.index ["department_id"], name: "index_people_on_department_id"
   end
@@ -54,6 +55,14 @@ ActiveRecord::Schema.define(version: 2020_03_22_185440) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["person_id"], name: "index_person_symptoms_on_person_id"
     t.index ["symptom_id"], name: "index_person_symptoms_on_symptom_id"
+  end
+
+  create_table "risks", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+    t.string "name"
+    t.string "key"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "symptoms", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
