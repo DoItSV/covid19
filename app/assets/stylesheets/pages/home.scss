@@ -1,28 +1,112 @@
 @import '../config/variables.scss';
 
-.hero {
-  max-width: 32em;
+.welcome {
   margin: 0 auto;
-  padding: 4em 1em;
+  max-width: 42em;
+  padding: 1em;
+  text-align: center;
 
-  .logo {
-    width: 500px;
-    margin: 0 auto 2em;
+  // Components
+  &__logo {
+    width: 125px;
+    margin: 0 auto;
+    color: $white;
+    span {
+      font-size: 1.2em;
+    }
   }
-  .heading {
-    font-size: $giant;
-    font-weight: bolder;
-    margin: 0;
-    line-height: 1;
+  &__title {
+    font-size: 1.5em;
+    color: $white;
   }
-  .description {
-    font-size: $medium;
-    margin: 1em 0;
+  &__description {
+    font-size: 1.1em;
+    color: $white;
   }
-  .information {
-    background-color: rgba($blue, 0.1);
-    padding: 1em;
-    border-radius: 4px;
-    margin-bottom: 1em;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+  transition: background-color 0.2s linear;
+
+  // Components
+  &__title {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: $black;
+  }
+  &__description {
+    font-size: 0.8em;
+    color: $gray;
+  }
+  &__icon {
+    margin-right: 0;
+    transition: margin 0.2s linear;
+  }
+
+  // Modifiers
+  &--coronavirus {
+    background-color: rgba($green, 0.2);
+
+    .action__title,
+    .action__description {
+      color: darken($green, 15);
+    }
+  }
+
+  // States
+  &:hover {
+    background-color: rgba($gray, 0.05);
+
+    .action__icon {
+      margin-right: -2.5px;
+    }
+  }
+  &--coronavirus:hover {
+    background-color: rgba($green, 0.25);
+  }
+}
+
+.source {
+  font-size: $xxs;
+  color: $gray;
+  padding: 0 1em;
+  margin: 0;
+}
+
+.divider {
+  height: 1px;
+  margin: 2em 0;
+  background-color: rgba($gray, 0.1);
+}
+
+.info {
+  color: $black;
+
+  // Components
+  &__text {
+    color: $gray;
+  }
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+
+    a {
+      color: $gray;
+    }
   }
 }

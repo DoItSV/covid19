@@ -11,13 +11,20 @@
 
 body {
   font-family: 'system';
-  font-size: $small;
-  background-color: $white;
-  line-height: 1.5;
+  font-size: $xs;
+  background-color: $blue;
+  line-height: 1.2;
 }
 
 .container {
-  max-width: 64em;
+  max-width: 42em;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 2em 1em;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  // Modifiers
+  &--white {
+    background-color: $white;
+  }
 }
