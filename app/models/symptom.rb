@@ -2,7 +2,7 @@
 #
 # Table name: symptoms
 #
-#  id         :bigint           not null, primary key
+#  id         :uuid             not null, primary key
 #  name       :string
 #  weight     :integer
 #  created_at :datetime         not null
