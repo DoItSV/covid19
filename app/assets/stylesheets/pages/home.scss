@@ -1,28 +1,23 @@
 @import '../config/variables.scss';
 
-.hero {
-  max-width: 32em;
-  margin: 0 auto;
-  padding: 4em 1em;
+.source {
+  font-size: $xxs;
+  color: $gray;
+  padding: 0 1em;
+  margin: 0;
+}
 
-  .logo {
-    width: 500px;
-    margin: 0 auto 2em;
-  }
-  .heading {
-    font-size: $giant;
-    font-weight: bolder;
-    margin: 0;
-    line-height: 1;
-  }
-  .description {
-    font-size: $medium;
-    margin: 1em 0;
-  }
-  .information {
-    background-color: rgba($blue, 0.1);
-    padding: 1em;
-    border-radius: 4px;
-    margin-bottom: 1em;
+.divider {
+  height: 1px;
+  margin: 2em 0;
+  background-color: rgba($gray, 0.1);
+}
+
+.info {
+  color: $black;
+
+  // Components
+  &__text {
+    color: $gray;
   }
 }

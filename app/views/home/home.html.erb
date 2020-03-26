@@ -1,15 +1,129 @@
-<div class="hero center">
-  <div class="logo">
-    <%= image_tag "dentrense_black" %>
+<header class="welcome">
+  <div class="welcome__logo">
+    <%= image_tag "mano_white" %>
+    <span>¡Déntrense!</span>
   </div>
-  <h1 class="heading">Haz tu autoevaluación del COVID-19</h1>
-  <p class="description">Evalúa tu salud y recibe instrucciones y recomendaciones sobre el COVID-19.</p>
-  <div class="information">
-    <p>Toda la información se recoge por la Comunidad de Madrid con fines estrictamente de interés público ante la situación decretada por las Autoridades Públicas, para proteger y salvaguardar un interés esencial para la vida de las personas.</p>
+  <h1 class="welcome__title">Haz tu autoevaluación del COVID-19</h1>
+  <p class="welcome__description">
+    Evalúa tu salud y recibe instrucciones y recomendaciones sobre el COVID-19.
+  </p>
+</header>
+
+<main class="container container--white">
+  <%= link_to terms_and_conditions_path, :class => "action action--coronavirus" do %>
+    <div class="action__content">
+      <h2 class="action__title">Comenzar autoevaluación</h2>
+      <p class="action__description">
+        Realiza esta autoevaluación sólo si crees que tienes síntomas.
+      </p>
+    </div>
+    <span class="action__icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#007363"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-arrow-right"
+      >
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </span>
+  <% end %>
+  <p class="source">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio natus tempora
+    a. Cum exercitationem illo itaque, ex ipsum ipsam nesciunt, mollitia libero
+    sapiente quae repellendus quibusdam reiciendis quasi at perspiciatis?
+  </p>
+  <div class="divider"></div>
+  <div class="more">
+    <a href="#" class="action">
+      <div class="action__content">
+        <h2 class="action__title">Preguntas frecuentes</h2>
+        <p class="action__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio natus
+          tempora a.
+        </p>
+      </div>
+      <span class="action__icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#979797"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-arrow-right"
+        >
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </span>
+    </a>
+    <a href="#" class="action">
+      <div class="action__content">
+        <h2 class="action__title">Noticias y Recursos</h2>
+        <p class="action__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio natus
+          tempora a.
+        </p>
+      </div>
+      <span class="action__icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#979797"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-arrow-right"
+        >
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </span>
+    </a>
   </div>
-  <%= link_to 'Iniciar Test', terms_and_conditions_path, :class => "button button--primary" %>
-  <%= link_to 'FAQ', faq_path, :class => "button button--primary" %>
-  <%= link_to 'Sobre Nosotros', about_us_path, :class => "button button--primary" %>
-</div>
-
-
+  <div class="divider"></div>
+  <div class="info">
+    <h3 class="info__heading">¿Qué es Déntrense?</h3>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <h3 class="info__heading">¿Qué hacen con la información?</h3>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <h3 class="info__heading">Quiero reportar un error y/o colaborar</h3>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+  </div>
+  <div class="divider"></div>
+  <ul class="links">
+    <li><a href="">Términos y condiciones</a></li>
+    <li><a href="">Aviso de privacidad</a></li>
+  </ul>
+</main>
