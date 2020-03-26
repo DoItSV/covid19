@@ -1,0 +1,44 @@
+@import '../config/variables.scss';
+
+.form-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+
+  // Components
+  &__label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 1em 0.5em;
+    border: 2px solid rgba($gray, 0.15);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  &__collection {
+    display: flex;
+  }
+}
+
+.form-actions {
+  margin: 2em 0 0;
+}
+
+.radio {
+  margin-right: 1em;
+  padding: 1em;
+  font-size: 1.1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 2px solid rgba($gray, 0.15);
+  border-radius: 4px;
+
+  &__input {
+    margin-right: 0.5em;
+  }
+}

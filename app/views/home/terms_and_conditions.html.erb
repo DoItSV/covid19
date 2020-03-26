@@ -1,4 +1,95 @@
-<h1>Terminos y condiciones</h1>
-<%= link_to 'Iniciar Test', step1_path %> |
-<%= link_to 'Inicio', root_path %>
+<header class="welcome">
+  <div class="welcome__logo">
+    <%= image_tag "mano_white" %>
+    <span>¡Déntrense!</span>
+  </div>
+  <h1 class="welcome__title">Términos y Condiciones</h1>
+</header>
 
+<main class="container container--white">
+  <%= link_to step1_path, :class => "button button--next" do %>
+  <div class="button__icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-check"
+    >
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+  </div>
+  <h2 class="button__text">Aceptar y Continuar</h2>
+  <% end %>
+  <div class="info">
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <p class="info__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
+      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
+      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
+    </p>
+    <a href="">Leer texto completo</a>
+    <%= link_to step1_path, :class => "button button--next button--with-margin" do %>
+    <div class="button__icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-check"
+      >
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h2 class="button__text">Aceptar y Continuar</h2>
+    <% end %> <%= link_to root_path, :class => "button button--cancel button--with-margin" do %>
+    <div class="button__icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="feather feather-x"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </div>
+    <h2 class="button__text">No acepto</h2>
+    <% end %>
+  </div>
+</main>

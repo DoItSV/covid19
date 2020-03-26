@@ -1,78 +1,5 @@
 @import '../config/variables.scss';
 
-.welcome {
-  margin: 0 auto;
-  max-width: 42em;
-  padding: 1em;
-  text-align: center;
-
-  // Components
-  &__logo {
-    width: 125px;
-    margin: 0 auto;
-    color: $white;
-    span {
-      font-size: 1.2em;
-    }
-  }
-  &__title {
-    font-size: 1.5em;
-    color: $white;
-  }
-  &__description {
-    font-size: 1.1em;
-    color: $white;
-  }
-}
-
-.action {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-  padding: 1em;
-  margin-bottom: 0.5em;
-  text-decoration: none;
-  transition: background-color 0.2s linear;
-
-  // Components
-  &__title {
-    font-size: 1em;
-    text-transform: uppercase;
-    color: $black;
-  }
-  &__description {
-    font-size: 0.8em;
-    color: $gray;
-  }
-  &__icon {
-    margin-right: 0;
-    transition: margin 0.2s linear;
-  }
-
-  // Modifiers
-  &--coronavirus {
-    background-color: rgba($green, 0.2);
-
-    .action__title,
-    .action__description {
-      color: darken($green, 15);
-    }
-  }
-
-  // States
-  &:hover {
-    background-color: rgba($gray, 0.05);
-
-    .action__icon {
-      margin-right: -2.5px;
-    }
-  }
-  &--coronavirus:hover {
-    background-color: rgba($green, 0.25);
-  }
-}
-
 .source {
   font-size: $xxs;
   color: $gray;
@@ -92,21 +19,5 @@
   // Components
   &__text {
     color: $gray;
-  }
-}
-
-.links {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-
-  li {
-    display: inline-block;
-    margin: 0 5px;
-
-    a {
-      color: $gray;
-    }
   }
 }

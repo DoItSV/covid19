@@ -1,13 +1,81 @@
 @import '../config/variables.scss';
 
 .button {
-  display: inline-block;
-  padding: 1em;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  border-radius: 4px;
+  padding: 1em 0;
+  border: none;
+  width: 100%;
+  font-size: 1em;
+  text-transform: uppercase;
 
-  &--primary {
-    background-color: $blue;
+  // Components
+  &__text {
+    margin: 0;
+  }
+
+  // Modifiers
+  &--next {
+    background-color: $green;
     color: $white;
+  }
+  &--cancel {
+    background-color: rgba($red, 0.1);
+    color: $red;
+  }
+  &--with-margin {
+    margin: 1em 0;
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+  transition: background-color 0.2s linear;
+
+  // Components
+  &__title {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: $black;
+  }
+  &__description {
+    font-size: 0.8em;
+    color: $gray;
+  }
+  &__icon {
+    margin-right: 0;
+    transition: margin 0.2s linear;
+  }
+
+  // Modifiers
+  &--coronavirus {
+    background-color: rgba($green, 0.2);
+
+    .action__title,
+    .action__description {
+      color: darken($green, 15);
+    }
+  }
+
+  // States
+  &:hover {
+    background-color: rgba($gray, 0.05);
+
+    .action__icon {
+      margin-right: -2.5px;
+    }
+  }
+  &--coronavirus:hover {
+    background-color: rgba($green, 0.25);
   }
 }

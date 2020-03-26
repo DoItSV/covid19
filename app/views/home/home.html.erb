@@ -10,7 +10,7 @@
 </header>
 
 <main class="container container--white">
-  <a href="#" class="action action--coronavirus">
+  <%= link_to terms_and_conditions_path, :class => "action action--coronavirus" do %>
     <div class="action__content">
       <h2 class="action__title">Comenzar autoevaluación</h2>
       <p class="action__description">
@@ -34,7 +34,7 @@
         <polyline points="12 5 19 12 12 19"></polyline>
       </svg>
     </span>
-  </a>
+  <% end %>
   <p class="source">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio natus tempora
     a. Cum exercitationem illo itaque, ex ipsum ipsam nesciunt, mollitia libero

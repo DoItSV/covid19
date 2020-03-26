@@ -16,15 +16,65 @@ body {
   line-height: 1.2;
 }
 
+a {
+  color: $gray;
+}
+
 .container {
   max-width: 42em;
   margin: 0 auto;
-  padding: 2em 1em;
+  padding: 2em 1.5em;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 
   // Modifiers
   &--white {
     background-color: $white;
+  }
+}
+
+.welcome {
+  margin: 0 auto;
+  max-width: 42em;
+  padding: 1.5em;
+  text-align: center;
+
+  // Components
+  &__logo {
+    width: 125px;
+    margin: 0 auto;
+    color: $white;
+    span {
+      font-size: 1.2em;
+    }
+  }
+  &__title {
+    font-size: 1.5em;
+    color: $white;
+  }
+  &__description {
+    font-size: 1.1em;
+    color: $white;
+  }
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+
+    a {
+      color: $gray;
+    }
+  }
+
+  // Modifiers
+  &--left {
+    text-align: left;
   }
 }
