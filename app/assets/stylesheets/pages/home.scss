@@ -1,0 +1,23 @@
+@import '../config/variables.scss';
+
+.source {
+  font-size: $xxs;
+  color: $gray;
+  padding: 0 1em;
+  margin: 0;
+}
+
+.divider {
+  height: 1px;
+  margin: 2em 0;
+  background-color: rgba($gray, 0.1);
+}
+
+.info {
+  color: $black;
+
+  // Components
+  &__text {
+    color: $gray;
+  }
+}

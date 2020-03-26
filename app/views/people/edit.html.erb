@@ -1,5 +1,12 @@
 <%- model_class = Person -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
-</div>
+<header class="welcome">
+  <div class="welcome__logo">
+    <%= image_tag "mano_white" %>
+    <span>¡Déntrense!</span>
+  </div>
+  <h1 class="welcome__title">Información de síntomas</h1>
+</header>
+
+<main class="container container--white">
 <%= render :partial => 'form' %>
+</main>

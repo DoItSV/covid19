@@ -1,18 +1,15 @@
 <%- model_class = Person -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
+<header class="welcome">
+  <div class="welcome__logo">
+    <%= image_tag "mano_white" %>
+    <span>¡Déntrense!</span>
+  </div>
+  <h1 class="welcome__title">Resultados</h1>
+</header>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:age) %>:</strong></dt>
-  <dd><%= @person.age %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:sex) %>:</strong></dt>
-  <dd><%= @person.sex %></dd>
-  <dt><strong>Result:</strong></dt>
-  <dd><%= @person.risk.name %></dd>
-  <dt><strong>Description:</strong></dt>
-  <dd><%= @person.risk.description %></dd>
-</dl>
+<main class="container container--white">
+  <%= link_to 'Ir al Inicio', root_path, :class => 'button button--next button--with-margin'  %>
+</main>
 
 
-<%= link_to 'Iniciar', step1_path, :class => 'btn btn-default'  %>
+
