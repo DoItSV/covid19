@@ -10,11 +10,11 @@
   <%= f.label :sex, "Sexo", :class => 'form-group__label' %>
   <div class="form-group__collection">
     <label class="radio">
-      <input type="radio" name="sex" class="radio__input" value="female" /> Femenino</label
-    >
+      <%= f.radio_button :sex, :female, :class => 'radio__input' %> Femenino
+    </label>
     <label class="radio">
-      <input type="radio" name="sex" class="radio__input" value="male" /> Masculino</label
-    >
+      <%= f.radio_button :sex, :male, :class => 'radio__input' %> Masculino
+    </label>
   </div>
 </div>
 
@@ -22,11 +22,11 @@
   <%= f.label :recent_trip, "¿Has viajado recientemente?", :class => 'form-group__label' %>
   <div class="form-group__collection">
     <label class="radio">
-      <input type="radio" name="recent_trip" class="radio__input" value="1" /> Si</label
-    >
+      <%= f.radio_button :recent_trip, '1', :class => 'radio__input' %> Si
+    </label>
     <label class="radio">
-      <input type="radio" name="recent_trip" class="radio__input" value="0" /> No</label
-    >
+      <%= f.radio_button :recent_trip, '0', :class => 'radio__input' %> No
+    </label>
   </div>
 </div>
 
@@ -34,11 +34,11 @@
   <%= f.label :recent_trip, "¿Has estado con contacto con alguien que ha viajado recientemente?", :class => 'form-group__label' %>
   <div class="form-group__collection">
     <label class="radio">
-      <input type="radio" name="contact_with_recent_trip" class="radio__input" value="1" /> Si</label
-    >
+      <%= f.radio_button :contact_with_recent_trip, '1', :class => 'radio__input' %> Si
+    </label>
     <label class="radio">
-      <input type="radio" name="contact_with_recent_trip" class="radio__input" value="0" /> No</label
-    >
+      <%= f.radio_button :contact_with_recent_trip, '0', :class => 'radio__input' %> No
+    </label>
   </div>
 </div>
 
