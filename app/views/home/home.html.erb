@@ -42,7 +42,7 @@
   </p>
   <div class="divider"></div>
   <div class="more">
-    <a href="#" class="action">
+    <a href="<%= url_for faq_path %>" class="action">
       <div class="action__content">
         <h2 class="action__title">Preguntas frecuentes</h2>
         <p class="action__description">
@@ -68,7 +68,7 @@
         </svg>
       </span>
     </a>
-    <a href="#" class="action">
+    <a href="<%= url_for news_resources_path %>" class="action">
       <div class="action__content">
         <h2 class="action__title">Noticias y Recursos</h2>
         <p class="action__description">
@@ -123,7 +123,7 @@
   </div>
   <div class="divider"></div>
   <ul class="links">
-    <li><a href="">Términos y condiciones</a></li>
-    <li><a href="">Aviso de privacidad</a></li>
+    <li><a href="<%= url_for terms_and_conditions_path %>">Términos y condiciones</a></li>
+    <li><a href="<%= url_for privacy_policy_path %>">Aviso de privacidad</a></li>
   </ul>
 </main>
