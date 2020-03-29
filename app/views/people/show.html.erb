@@ -8,8 +8,29 @@
 </header>
 
 <main class="container container--white">
-  <%= link_to 'Ir al Inicio', root_path, :class => 'button button--next button--with-margin'  %>
+  <div class="info">
+    <h3 class="info__heading">Resultado: <%= @person.risk.name.upcase %></h3>
+    <p class="info__text">
+      <%= @person.risk.description %>
+    </p>
+    <h3 class="info__heading">¿Cómos te transmite?</h3>
+    <ul class="info__text">
+      <li>El virus puede ser transmitido de persona a persona por contacto cercano. Se considera contacto cercano estar a menos de 2 metros de distancia.</li>
+      <li>Puede transmitirse de persona a persona a través el aire cuando alguien que tiene el virus tose o estornuda.</li>
+      <li>Se puede transmitir si tocan una superficie que ha sido previamente tocada por alguien con el virus.</li>
+      <li>Alguien sin síntomas aún puede tener el virus y transmitirlo a otras personas.</li>
+    </ul>
+    <h3 class="info__heading">Precauciones</h3>
+    <ul class="info__text">
+      <li>Algunas personas se infectan pero no desarrollan ningún síntoma y no se encuentran mal.
+      <li>Debido a que pueden existir casos asintomáticos es fundamental tener distanciamiento social (2 metros de distancia) y aislamiento domiciliario para no poner en riesgo a personas en las que el virus sí podría ser mortal (20%).</li>
+      <li>Es importante lavarse las manos regularmente. Además del alcohol debido a la crisis, un método más accesible y fácil de adquirir es el jabón de manos.</li>
+      <li>Al toser cubrirse con el brazo no con la boca o la mano y según esto, no es conveniente saludar ni con el codo, ni con la mano.</li>
+    </ul>
+  </div>
+  <div class="divider"></div>
+  <ul class="links">
+    <li><a href="<%= url_for root_path %>">Volver al inicio</a></li>
+  </ul>
 </main>
-
-
 

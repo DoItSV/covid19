@@ -1,2 +1,24 @@
-<h1>Preguntas Frecuentes</h1>
-<%= link_to 'Inicio', root_path %>
+<header class="welcome">
+  <div class="welcome__logo">
+    <%= image_tag "mano_white.svg" %>
+    <span>¡Déntrense!</span>
+  </div>
+  <h1 class="welcome__title">Preguntas Frecuentes</h1>
+</header>
+
+<main class="container container--white">
+  <div class="info">
+    <% @questions.each do |question| %>
+      <h3 class="info__heading"><%= question.question %></h3>
+      <p class="info__text">
+        <%= question.answer %>
+      </p>
+    <% end %>
+  </div>
+  <div class="divider"></div>
+  <ul class="links">
+    <li><a href="<%= url_for root_path %>">Inicio</a></li>
+    <li><a href="<%= url_for terms_and_conditions_path %>">Términos y condiciones</a></li>
+    <li><a href="<%= url_for privacy_policy_path %>">Aviso de privacidad</a></li>
+  </ul>
+</main>

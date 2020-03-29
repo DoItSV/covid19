@@ -20,7 +20,7 @@ class Person < ApplicationRecord
   belongs_to :department, optional: true
   belongs_to :city, optional: true
   belongs_to :risk, optional: true
-  has_many :person_symptoms
+  has_many :person_symptoms, dependent: :destroy
   has_many :symptoms, through: :person_symptoms
 
   enum sex: %i[male female other]
@@ -36,21 +36,7 @@ class Person < ApplicationRecord
   protected
 
   def process_symptoms
-    symptoms_sum = Symptom.where(id: symptoms_ids).sum(:weight)
-    symptoms_sum += 3 if recent_trip
-    symptoms_sum += 2 if contact_with_recent_trip
-
-    self.result = begin
-      if symptoms_sum <= 2
-        :low
-      elsif symptoms_sum < 4
-        :medium
-      else
-        :high
-      end
-    end
-
-    self.risk = Risk.find_by(key: result)
+    self.risk = CalculateRiskService.new(symptoms_ids, recent_trip, contact_with_recent_trip).call
   end
 
   def add_person_symptoms

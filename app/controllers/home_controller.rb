@@ -5,7 +5,9 @@ class HomeController < ApplicationController
 
   def about_us; end
 
-  def faq; end
+  def faq
+    @questions = Question.all
+  end
 
   def news_resources; end
 
