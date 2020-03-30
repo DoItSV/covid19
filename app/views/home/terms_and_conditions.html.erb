@@ -1,95 +1,121 @@
 <header class="welcome">
-  <div class="welcome__logo">
-    <%= image_tag "mano_white.svg" %>
-    <span>¡Déntrense!</span>
-  </div>
-  <h1 class="welcome__title">Términos y Condiciones</h1>
+	<div class="welcome__logo">
+		<%= image_tag "mano_white.svg" %>
+		<span>¡Déntrense!</span>
+	</div>
+	<h1 class="welcome__title">Términos y Condiciones</h1>
 </header>
 
 <main class="container container--white">
-  <%= link_to step1_path, :class => "button button--next" do %>
-  <div class="button__icon">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-check"
-    >
-      <polyline points="20 6 9 17 4 12"></polyline>
-    </svg>
-  </div>
-  <h2 class="button__text">Aceptar y Continuar</h2>
-  <% end %>
-  <div class="info">
-    <p class="info__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
-      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
-      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
-    </p>
-    <p class="info__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
-      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
-      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
-    </p>
-    <p class="info__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
-      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
-      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
-    </p>
-    <p class="info__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
-      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
-      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
-    </p>
-    <p class="info__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quae
-      beatae, a molestiae sint sit dolorem quam eum magni voluptatibus
-      recusandae consectetur ad at vero veniam. Sint quibusdam fugit itaque.
-    </p>
-    <a href="">Leer texto completo</a>
-    <%= link_to step1_path, :class => "button button--next button--with-margin" do %>
-    <div class="button__icon">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="feather feather-check"
-      >
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-    </div>
-    <h2 class="button__text">Aceptar y Continuar</h2>
-    <% end %> <%= link_to root_path, :class => "button button--cancel button--with-margin" do %>
-    <div class="button__icon">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="feather feather-x"
-      >
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </div>
-    <h2 class="button__text">No acepto</h2>
-    <% end %>
-  </div>
+	<%= link_to step1_path, :class => "button button--next" do %>
+	<div class="button__icon">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="feather feather-check"
+		>
+			<polyline points="20 6 9 17 4 12"></polyline>
+		</svg>
+	</div>
+	<h2 class="button__text">Aceptar y Continuar</h2>
+	<% end %>
+	<div class="info">
+		<p class="info__text">Vigente desde el 29 de marzo de 2020</p>
+		<p class="info__text">AL ACCEDER Y USAR EL FUNCIONAMIENTO DE EL SITIO WEB DENTRENSE.COM MANIFIESTAS QUE HAS LEÍDO Y ACEPTAS ESTAS CONDICIONES DE USO Y LA POLÍTICA DE PRIVACIDAD. AQUÍ SE RECOGE TODA LA INFORMACIÓN RELATIVA A TUS DERECHOS Y OBLIGACIONES COMO USUARIO REGISTRADO DE DICHA Sitio Web, ASÍ COMO AL USO DE NUESTROS SERVICIOS.</p>
+		<p class="info__text"><strong>1- Qué es DENTRENSE</strong></p>
+		<p class="info__text">Déntrense es una iniciativa ciudadana para informar, prevenir y concientizar sobre el Coronavirus, partiendo de la importancia de mantenerse en casa para cuidar (nos) y seguir las medidas que permitan superar desde la solidaridad y la prevención colectiva. Solo juntos podemos combatir esta crisis de salud mundial.</p>
+		<p class="info__text">ACLARACIÓN: El USUARIO queda apercibido de que la utilización del prediagnóstico NO CONSTITUYE EN NINGÚN CASO UN SERVICIO DE DIAGNÓSTICO MÉDICO, DE ATENCIÓN DE URGENCIAS O DE PRESCRIPCIÓN DE TRATAMIENTOS FARMACOLÓGICOS. Se advierte y pone en conocimiento del USUARIO, que la utilización del sitio web no puede en ningún caso sustituir la consulta presencial personal frente a un profesional médico debidamente cualificado.</p>
+		<p class="info__text"><strong>2- Alta como USUARIO y uso de DÉNTRENSE</strong></p>
+		<p class="info__text">Para la utilización de los servicios del DÉNTRENSE no es requisito necesario estar registrado como USUARIO. Por tanto, el acceso a el sitio web implica que puedes entrar libremente y se facilite una serie de datos básicos para identificarte como USUARIO, así como, en su caso, que verifiques tu número de teléfono móvil.</p>		‍
+		<p class="info__text">El USUARIO acepta sin reserva el contenido de las presentes CONDICIONES DE USO. En consecuencia, el USUARIO deberá leer detenidamente las mismas antes del acceso y de la utilización de cualquier servicio del DÉNTRENSE bajo su entera responsabilidad.</p>		‍
+		<p class="info__text">AVISO IMPORTANTE: La utilización del sitio web es gratuita, libre y voluntaria, pero recuerda que no podrás ser USUARIO de DÉNTRENSE si no tienes al menos DIECIOCHO AÑOS o cuentas con el consentimiento de tus padres o tutores legales. Si no cumples con este requisito por favor no utilices el sitio web. Los padres, tutores y/o los responsables de los menores de edad o incapaces que utilicen la DÉNTRENSE serán responsables por dicho uso.</p>
+		<p class="info__text">Queda prohibido el suministro de datos falsos y, por tanto, el USUARIO deberá identificarse con sus datos reales, actuales y veraces, y mantenerlos actualizados, así como facilitar un número de teléfono móvil para su verificación.</p>
+		<p class="info__text"><strong>3 - Propiedad intelectual e industrial</strong></p>
+		<p class="info__text">Los textos, diseños, imágenes, bases de datos, logos, estructura, marcas y demás elementos del DÉNTRENSE están protegidos por las leyes y los tratados internacionales sobre propiedad intelectual e industrial. Cualquier reproducción, transmisión, adaptación, traducción, modificación, comunicación al público, o cualquier otra explotación de todo o parte del contenido de este sitio, efectuada de cualquier forma o por cualquier medio, electrónico, mecánico u otro, están estrictamente prohibidos salvo autorización previa por escrito de su correspondiente titular o sujeción, de tales contenidos, a licencias de creativecommons, en cuyo caso estarán permitidos los usos que amparen estas licencias según la modalidad de licencia aplicable en cada caso. Cualquier infracción de estos derechos puede dar lugar a procedimientos extrajudiciales o judiciales civiles o penales que correspondan.</p>
+		<p class="info__text">En este sentido, se otorga al USUARIO únicamente una licencia limitada, temporal, no exclusiva y revocable para que pueda utilizar, descargar y/o instalar DÉNTRENSE en sus dispositivos, conforme a lo previsto en estas condiciones y para los usos previstos. En todo caso, los derechos no expresamente otorgados al USUARIO en virtud de las presentes condiciones son reservados.</p>
+		<p class="info__text">La legitimidad de los derechos de propiedad intelectual o industrial correspondientes a los contenidos aportados por terceros es de la exclusiva responsabilidad de los mismos.</p>
+		<p class="info__text">A los efectos de preservar los posibles derechos de propiedad intelectual, en el caso de que cualquier USUARIO o un tercero considere que se ha producido una violación de sus legítimos derechos por la introducción de un determinado contenido en el DÉNTRENSE, deberá notificar dicha circunstancia, por escrito, al TITULAR.</p>
+		<p class="info__text"><strong>5 - Responsabilidad y obligaciones</strong></p>
+		<p class="info__text">El Sitio Web se ofrecen con “entrega de mejor esfuerzo” (best effort) dado que su calidad y disponibilidad pueden verse afectadas por múltiples factores ajenos como son, entre otros, la ubicación geográfica del USUARIO, limitaciones o restricciones de las redes de terceros operadores o la compatibilidad del dispositivo y sistema operativo utilizado por el USUARIO. Igualmente, los USUARIOS aceptan que el servicio pueda verse interrumpido cuando sea necesario por labores de mantenimiento.</p>
+		<p class="info__text">Por todo ello, DÉNTRENSE no será responsable de los problemas de acceso o disponibilidad de DÉNTRENSE y/o sus servicios, ni de los perjuicios que se pudieran causar por ello, cuando éstos procedan de factores ajenos a su ámbito de control. Igualmente, DÉNTRENSE no se hace responsable de los fallos, incompatibilidades y/o daños de tus terminales o dispositivos que, en su caso, se pudiesen derivar de la descarga y/o uso de el sitio web.</p>
+		<p class="info__text">Igualmente, el TITULAR no garantiza ni se hace responsable, en ningún caso ni circunstancia, de los siguientes hechos y contenidos, ni de cualesquiera daños y perjuicios que pudieran, en su caso, derivarse de los mismos:</p>
+		<p class="info__text">- Actualización, exactitud, exhaustividad, pertinencia, actualidad y fiabilidad de sus contenidos, cualquiera que sea la causa y las dificultades o problemas técnicos o de otra naturaleza en los que tengan su origen dichos hechos.</p>
+		<p class="info__text">- La calidad, titularidad, legitimidad, adecuación o pertinencia de los materiales, y demás contenidos.</p>
+		<p class="info__text">Como USUARIO de el sitio web te obligas a:</p>
+		<p class="info__text">- Custodiar las credenciales de USUARIO con diligencia, impidiendo el acceso de terceras personas no autorizados a los mismos y por tanto asegurando su confidencialidad.</p>
+		<p class="info__text">- Notificar a DÉNTRENSE con carácter inmediato cualquier indicio de la existencia de una violación en la seguridad en el sitio web, de usos inapropiados o prohibidos de los servicios prestados desde la misma, o de fallos de seguridad de cualquier índole.</p>
+		<p class="info__text">- Hacer buen uso de los contenidos, información y servicios prestados desde o a través de el sitio web, conforme a la ley, la buena fe y a las buenas costumbres generalmente aceptadas, comprometiéndose expresamente a:</p>
+		<p class="info__text">- Abstenerse de realizar prácticas o usos de los servicios con fines ilícitos, fraudulentos, lesivos de derechos o intereses de DÉNTRENSE o de terceros, infractores de las normas contenidas en el presente documento.</p>
+		<p class="info__text">- Abstenerse de realizar cualquier tipo de acción que pudiera inutilizar, sobrecargar o dañar sistemas, equipos o servicios de el sitio web o accesibles directa o indirectamente a través de esta.</p>
+		<p class="info__text">- Respetar los derechos de propiedad intelectual e industrial de DÉNTRENSE y de terceros sobre los contenidos, información y servicios prestados desde o a través de el sitio web, absteniéndose con carácter general de copiar, distribuir, reproducir o comunicar en forma en forma alguna los mismos a terceros, de no mediar autorización expresa y por escrito de DÉNTRENSE o de los titulares de dichos derechos.</p>
+		<p class="info__text">- No proporcionar información personal falsa en el sitio web, siendo el único responsable de la comunicación real y veraz de sus datos personales.</p>
+		<p class="info__text">- No crear una cuenta falsa, ni suplantar la personalidad de un tercero sin su autorización.</p>
+		<p class="info__text">Como USUARIO de el sitio web, tu eres el único responsable del uso que decidas realizar de los servicios de DÉNTRENSE. El incumplimiento de tus obligaciones como USUARIO podrá implicar la baja inmediata de el sitio web y/o sus servicios; todo ello sin derecho a recibir compensación de ningún tipo, y sin perjuicio de las correspondientes acciones legales a que por parte de DÉNTRENSE hubiere lugar.</p>
+		<p class="info__text">El TITULAR no será responsable en ningún caso de la utilización indebida de DÉNTRENSE y de sus contenidos, siendo el USUARIO el único responsable por los daños y perjuicios que pudieran derivarse de un mal uso de estos o de la infracción de lo dispuesto en las presentes condiciones en que pueda incurrir. El USUARIO se compromete a mantener indemne a el TITULAR frente a las reclamaciones o sanciones que pudiera recibir de terceros, ya sean particulares o entidades públicas o privadas, por razón de dichas infracciones, así como frente a los daños y perjuicios de todo tipo que pueda sufrir como consecuencia de las mismas.</p>
+		<p class="info__text">En cualquier caso, el TITULAR se reserva el derecho de, en cualquier momento y sin necesidad de previo aviso, modificar o eliminar el contenido, estructura, diseño, servicios y condiciones de acceso y/o uso de este sitio, siempre que lo estime oportuno, siempre que dicho cambio no afecte a los principios y derechos de los usuarios en materia de la protección de sus datos personales, ni suponga una infracción de dicha normativa así como el derecho interpretar las presentes condiciones, en cuantas cuestiones pudiera plantear su Sitio Web.</p>
+		<p class="info__text">Asimismo, queda prohibida la reproducción, distribución, transmisión, adaptación o modificación, por cualquier medio y en cualquier forma, de los contenidos del DÉNTRENSE o sus cursos (textos, diseños, gráficos, informaciones, bases de datos, archivos de sonido y/o imagen, logos y demás elementos de estos sitios), salvo autorización previa de sus legítimos titulares o cuando así resulte permitido por la licencia creativecommons que en su caso sea aplicable a los contenidos o por la normativa vigente aplicable.</p>
+		<p class="info__text">La enumeración anterior tiene mero carácter enunciativo y no es, en ningún caso, exclusivo ni excluyente en ninguno de sus puntos. En todos los supuestos, El Titular EXCLUYE CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE CUALQUIER NATURALEZA DERIVADOS DIRECTA O INDIRECTAMENTE DE LOS MISMOS Y DE CUALESQUIERA OTROS NO ESPECIFICADOS DE ANÁLOGAS CARACTERÍSTICAS.</p>
+		<p class="info__text"><strong>6 - Enlaces</strong></p>
+		<p class="info__text">DÉNTRENSE puede incluir dentro de sus contenidos enlaces con sitios pertenecientes y/o gestionados por terceros con el objeto de facilitar el acceso de los usuarios a información y servicios disponibles a través de Internet.</p>
+		<p class="info__text">El TITULAR no asume ninguna responsabilidad derivada de la existencia de enlaces entre los contenidos de DÉNTRENSE y contenidos situados fuera de los mismos o de cualquier otra mención de contenidos externos a este sitio, exceptuando aquellas responsabilidades establecidas en la normativa de protección de datos. Tales enlaces o menciones tienen una finalidad exclusivamente informativa y, en ningún caso, implican el apoyo, aprobación, comercialización o relación alguna entre El Titular y las personas o entidades autoras y/o gestoras de tales contenidos o titulares de los sitios donde se encuentren, ni garantía alguna de el TITULAR por el correcto funcionamiento de los sitios o contenidos enlazados.</p>
+		<p class="info__text">En este sentido el USUARIO se obliga a poner la máxima diligencia y prudencia en el caso de acceder o usar contenidos o servicios de los sitios a los que acceda en virtud de los mencionados enlaces.</p>
+		<p class="info__text"><strong>7 - Hiperenlaces</strong></p>
+		<p class="info__text">No se admite la reproducción de páginas del DÉNTRENSE mediante hiperenlace desde otro DÉNTRENSE o página web, permitiéndose exclusivamente el acceso a los mismos.</p>
+		<p class="info__text">En ningún caso se podrá dar a entender que El Titular autoriza el hiperenlace o que ha supervisado o asumido de cualquier forma los servicios o contenidos ofrecidos por la web desde la que se produce el hiperenlace.</p>
+		<p class="info__text">No se podrán realizar manifestaciones o referencias falsas, incorrectas o inexactas sobre las páginas y servicios de el TITULAR.</p>
+		<p class="info__text">Se prohíbe explícitamente la creación de cualquier tipo de navegador, programa, browser o border environment sobre las páginas del DÉNTRENSE.</p>
+		<p class="info__text">No se podrán incluir contenidos contrarios a los derechos de terceros, ni contrarios a la moral y las buenas costumbres aceptadas, ni contenidos o informaciones ilícitas, en la página web desde la que se establezca el hiperenlace.</p>
+		<p class="info__text">La existencia de un hiperenlace entre una página web y el DÉNTRENSE no implica la existencia de relaciones entre el TITULAR y el propietario de esa página, ni la aceptación y aprobación de sus contenidos y servicios.</p>
+		<p class="info__text"><strong>8 - Ley Aplicable y Fuero</strong></p>
+		<p class="info__text">Las presentes condiciones de uso se regirán e interpretarán en todos y cada uno de sus extremos por la Ley Española, y dentro de esta por el derecho civil común. En aquellos casos en los que la normativa vigente no prevea la obligación de someterse a un fuero o legislación determinado, DÉNTRENSE y los USUARIOS, con renuncia a cualquier otro fuero que pudiera corresponderles, se someten a los juzgados y tribunales de San Salvador capital (El Salvador).</p>
+		<p class="info__text"><strong>9- Información corporativa y contacto</strong></p>
+		<p class="info__text">Para cualquier situación correspondiente a puntos no concernientes en este documento puede enviar un correo a dentrense@gmail.com</p>
+		<p class="info__text">El soporte al USUARIO en caso de incidencias y/o reclamaciones será principalmente online y será atendido a la mayor brevedad.</p>
+		<a href="">Leer texto completo</a>
+		<%= link_to step1_path, :class => "button button--next button--with-margin" do %>
+		<div class="button__icon">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="feather feather-check"
+			>
+				<polyline points="20 6 9 17 4 12"></polyline>
+			</svg>
+		</div>
+		<h2 class="button__text">Aceptar y Continuar</h2>
+		<% end %> <%= link_to root_path, :class => "button button--cancel button--with-margin" do %>
+		<div class="button__icon">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				class="feather feather-x"
+			>
+				<line x1="18" y1="6" x2="6" y2="18"></line>
+				<line x1="6" y1="6" x2="18" y2="18"></line>
+			</svg>
+		</div>
+		<h2 class="button__text">No acepto</h2>
+		<% end %>
+	</div>
 </main>
