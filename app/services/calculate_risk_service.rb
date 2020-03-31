@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CalculateRiskService
   attr_reader :symptoms_ids, :recent_trip, :contact_with_recent_trip
 
@@ -18,8 +20,8 @@ class CalculateRiskService
 
   def calculate_weight
     @weight = symptoms_sum
-    @weight += 4 if recent_trip
-    @weight += 3 if contact_with_recent_trip
+    @weight += 3 if recent_trip
+    @weight += 2 if contact_with_recent_trip && !recent_trip
   end
 
   def risk_key
