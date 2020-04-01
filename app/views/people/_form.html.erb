@@ -7,7 +7,7 @@
   <%= f.number_field :age, min: 0, max: 110, :class => 'form-group__input', required: true, :placeholder => "Ingresa tu edad" %>
 </div>
 <div class="form-group">
-  <%= f.label :sex, "Sexo", :class => 'form-group__label' %>
+  <%= f.label :sex, "Sexo", :class => 'form-group__label white' %>
   <div class="form-group__collection">
     <label class="radio">
       <%= f.radio_button :sex, :female, :class => 'radio__input', required: true %> Femenino
@@ -19,7 +19,7 @@
 </div>
 
 <div class="form-group">
-  <%= f.label :recent_trip, "¿Has viajado recientemente?", :class => 'form-group__label' %>
+  <%= f.label :recent_trip, "¿Has viajado recientemente?", :class => 'form-group__label white' %>
   <div class="form-group__collection">
     <label class="radio">
       <%= f.radio_button :recent_trip, '1', :class => 'radio__input', required: true %> Si
@@ -31,7 +31,7 @@
 </div>
 
 <div class="form-group">
-  <%= f.label :recent_trip, "¿Has estado con contacto con alguien que ha viajado recientemente?", :class => 'form-group__label' %>
+  <%= f.label :recent_trip, "¿Has estado con contacto con alguien que ha viajado recientemente?", :class => 'form-group__label white' %>
   <div class="form-group__collection">
     <label class="radio">
       <%= f.radio_button :contact_with_recent_trip, '1', :class => 'radio__input', required: true %> Si
@@ -46,7 +46,7 @@
 
 <%= collection_check_boxes(:person, :symptoms_ids, @symptoms, :id, :name) do |b| %>
 <div class="form-group">
-  <%= b.label(class: "check") { b.check_box(class: "check__input") + b.text } %>
+  <%= b.label(class: "check check--block") { b.check_box(class: "check__input") + b.label(class: "check__label") { b.text } } %>
 </div>
 <% end %>
 
