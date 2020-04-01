@@ -3,9 +3,12 @@
   <div class="welcome__logo">
     <%= image_tag "dentrense_white.svg" %>
   </div>
-  <h1 class="welcome__title">Información general</h1>
+  <h1 class="welcome__title center">Completa el siguiente formulario</h1>
+  <p class="welcome__description">
+    Utilizaremos datos relativos a tu salud, para el correcto funcionamiento del servicio de autoevaluación y otras finalidades relacionadas, por motivos de interés público.
+  </p>
 </header>
 
-<main class="container container--white">
+<main class="container">
 <%= render :partial => 'form' %>
 </main>

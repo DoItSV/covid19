@@ -11,9 +11,10 @@
 
 body {
   font-family: 'system';
-  font-size: $xs;
+  font-size: $xxs;
   background-color: $blue;
-  line-height: 1.2;
+  line-height: 1.3;
+  padding: 20px;
 }
 
 a {
@@ -23,21 +24,21 @@ a {
 .container {
   max-width: 42em;
   margin: 0 auto;
-  padding: 2em 1.5em;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  padding: 0;
+  border-radius: 20px;
 
   // Modifiers
   &--white {
     background-color: $white;
+  }
+  &--with-padding {
+    padding: 15px;
   }
 }
 
 .welcome {
   margin: 0 auto;
   max-width: 42em;
-  padding: 1.5em;
-  text-align: center;
 
   // Components
   &__logo {

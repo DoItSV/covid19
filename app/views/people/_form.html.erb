@@ -3,8 +3,8 @@
 <% if @person.id.nil? %>
 
 <div class="form-group">
-  <%= f.label :age, "¿Cuál es tu edad?", :class => 'form-group__label' %> 
-  <%= f.number_field :age, min: 0, max: 110, :class => 'form-group__input', required: true %>
+  <%= f.label :age, "Edad", :class => 'form-group__label white' %> 
+  <%= f.number_field :age, min: 0, max: 110, :class => 'form-group__input', required: true, :placeholder => "Ingresa tu edad" %>
 </div>
 <div class="form-group">
   <%= f.label :sex, "Sexo", :class => 'form-group__label' %>

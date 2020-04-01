@@ -2,19 +2,15 @@
   <div class="welcome__logo">
     <%= image_tag "dentrense_white.svg" %>
   </div>
-  <h1 class="welcome__title">Haz tu autoevaluación del COVID-19</h1>
-  <p class="welcome__description">
+  <p class="welcome__description center">
     Evalúa tu salud y recibe instrucciones y recomendaciones sobre el COVID-19.
   </p>
 </header>
 
-<main class="container container--white">
-  <%= link_to terms_and_conditions_path, :class => "action action--coronavirus" do %>
+<main class="container container--white container--with-padding">
+  <%= link_to terms_and_conditions_path, :class => "action action--coronavirus action--with-padding" do %>
     <div class="action__content">
-      <h2 class="action__title">Comenzar autoevaluación</h2>
-      <p class="action__description">
-        Realiza esta autoevaluación sólo si crees que tienes síntomas.
-      </p>
+      <h2 class="action__title">Haz tu autoevaluación del COVID-19 aquí</h2>
     </div>
     <span class="action__icon">
       <svg
@@ -35,7 +31,7 @@
     </span>
   <% end %>
   <p class="source">
-    La evaluación genera un resultado con el nivel de riesgo calculado en base a los síntomas, no pretende reemplazar el diagnóstico de un médico. En caso de padecer dificultad para respirar busque asistencia médica inmediatamente.
+    Realiza esta autoevaluación sólo si crees que tienes síntomas.
   </p>
   <div class="divider"></div>
   <div class="more">
