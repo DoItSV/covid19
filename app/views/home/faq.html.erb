@@ -2,22 +2,50 @@
   <div class="welcome__logo">
     <%= image_tag "dentrense_white.svg" %>
   </div>
-  <h1 class="welcome__title">Preguntas Frecuentes</h1>
+  <h1 class="welcome__title center">Preguntas Frecuentes</h1>
 </header>
 
 <main class="container container--white container--with-padding">
   <div class="info">
-    <% @questions.each do |question| %>
-      <h3 class="info__heading"><%= question.question %></h3>
+    <div id="accordionGroup" class="Accordion" data-allow-multiple>
+    <% @questions.each.with_index do |question, index| %>
+    <h3>
+      <button
+        aria-expanded="<%= (index === 0 ? true : false) %>"
+        class="Accordion-trigger"
+        aria-controls="sect<%= index %>"
+        id="accordion<%= index %>"
+      >
+        <span class="Accordion-title">
+          <%= question.question %>
+          <span class="Accordion-icon"></span>
+        </span>
+      </button>
+    </h3>
+    <div
+      id="sect<%= index %>"
+      role="region"
+      aria-labelledby="accordion<%= index %>"
+      class="Accordion-panel"
+      <%= (index === 0 ? nil : 'hidden=""') %>
+    >
       <p class="info__text">
         <%= question.answer %>
       </p>
+    </div>
     <% end %>
+    </div>
   </div>
-  <div class="divider"></div>
   <ul class="links">
-    <li><a href="<%= url_for root_path %>">Inicio</a></li>
-    <li><a href="<%= url_for terms_and_conditions_path %>">Términos y condiciones</a></li>
-    <li><a href="<%= url_for privacy_policy_path %>">Aviso de privacidad</a></li>
+    <li>
+      <a href="<%= url_for terms_and_conditions_path %>"
+        >Términos y condiciones</a
+      >
+    </li>
+    <li>
+      <a href="<%= url_for privacy_policy_path %>">Aviso de privacidad</a>
+    </li>
   </ul>
 </main>
+
+<%= javascript_pack_tag 'accordion' %>
