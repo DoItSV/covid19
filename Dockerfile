@@ -44,6 +44,10 @@ RUN yarn install --check-files
 
 COPY . ./
 
+RUN bundle exec rake db:migrate
+
+RUN bundle exec rake db:seed
+
 EXPOSE 3000
 
 ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
