@@ -26,11 +26,13 @@ RUN apk add --update --no-cache \
       postgresql-dev \
       python \
       tzdata \
-      yarn 
+      yarn
 
 RUN gem install bundler -v $BUNDLER_VERSION
 
-WORKDIR /app
+ENV RAILS_ROOT /app
+
+WORKDIR $RAILS_ROOT
 
 COPY Gemfile Gemfile.lock ./
 
@@ -44,10 +46,6 @@ RUN yarn install --check-files
 
 COPY . ./
 
-RUN bundle exec rake db:migrate
-
-RUN bundle exec rake db:seed
-
 EXPOSE 3000
 
-ENTRYPOINT ["./entrypoints/docker-entrypoint.sh"]
+ENTRYPOINT ["/docker/app/entrypoints/docker-entrypoint.sh"]
