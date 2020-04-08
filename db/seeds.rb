@@ -25,7 +25,7 @@ end
 if Risk.count.zero?
   Risk.create!(name: 'Bajo', key: 'low', description: 'Los datos ingresados no son coincidentes con síntomas relacionados a pacientes con Coronavirus (COVID-19).')
   Risk.create!(name: 'Medio', key: 'medium', description: 'Algunos pacientes pueden presentar síntomas que aunque parecen leves y aparecen de forma gradual pueden ser coincidentes con síntomas de Coronavirus (COVID-19).')
-  Risk.create!(name: 'Alto', key: 'high', description: 'Los síntomas presentados tienen una fuerte relación con los síntomas de el COVID-19. Llame al número 132 para presentar su caso. Al llamar tendrá una breve consulta por teléfono para determinar si requiere atención especializada.')
+  Risk.create!(name: 'Alto', key: 'high', description: 'Los síntomas presentados tienen una fuerte relación con los síntomas presentados por pacientes han sido diagnosticados COVID-19. Llame al número 132 para presentar su caso. Al llamar tendrá una breve consulta por teléfono para determinar si requiere atención especializada.')
 end
 
 if Question.count.zero?
@@ -38,3 +38,4 @@ if Question.count.zero?
   Question.create!(question: '¿Es posible contagiarse de COVID-19 por contacto con las heces de una persona que padezca la enfermedad?', answer: 'El riesgo de contraer la COVID-19 por contacto con las heces de una persona infectada parece ser bajo. Aunque las investigaciones iniciales apuntan a que el virus puede estar presente en algunos casos en las heces, la propagación por esta vía no es uno de los rasgos característicos del brote. La OMS está estudiando las investigaciones en curso sobre las formas de propagación de la COVID-19 y seguirá informando sobre los nuevos resultados. No obstante, se trata de un riesgo y por lo tanto es una razón más para lavarse las manos con frecuencia, después de ir al baño y antes de comer.')
   Question.create!(question: '¿Qué puedo hacer para protegerse y prevenir la propagación de la enfermedad?', answer: 'Manténgase al día de la información más reciente sobre el brote de COVID-19, a la que puede acceder en el sitio web de la OMS y a través de las autoridades de salud pública pertinentes a nivel nacional y local. Se han registrado casos en muchos países de todo el mundo, y en varios de ellos se han producido brotes. Las autoridades chinas y las de otros países han conseguido enlentecer o detener el avance de los brotes, pero la situación es impredecible y es necesario comprobar con regularidad las noticias más recientes.')
 end
+
