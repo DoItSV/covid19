@@ -1,50 +1,28 @@
 FROM ruby:2.7.1-alpine3.11
 
-ENV BUNDLER_VERSION=2.1.2
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs 
 
-RUN apk add --update --no-cache \
-      binutils-gold \
-      build-base \
-      curl \
-      file \
-      g++ \
-      gcc \
-      git \
-      less \
-      libstdc++ \
-      libffi-dev \
-      libc-dev \ 
-      linux-headers \
-      libxml2-dev \
-      libxslt-dev \
-      libgcrypt-dev \
-      make \
-      netcat-openbsd \
-      nodejs \
-      openssl \
-      pkgconfig \
-      postgresql-dev \
-      python \
-      tzdata \
-      yarn
+# Set an environment variable where the Rails app is installed to inside of Docker image
+ENV RAILS_ROOT /var/www/covid19
+RUN mkdir -p $RAILS_ROOT 
 
-RUN gem install bundler -v $BUNDLER_VERSION
-
-ENV RAILS_ROOT /app
-
+# Set working directory
 WORKDIR $RAILS_ROOT
 
-COPY Gemfile Gemfile.lock ./
+# Setting env up
+ENV RAILS_ENV='production'
+ENV RACK_ENV='production' 
 
-RUN bundle config build.nokogiri --use-system-libraries
+# Adding gems
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
 
-RUN bundle check || bundle install
+RUN bundle install --jobs 20 --retry 5 --without development test 
 
-COPY package.json yarn.lock ./
+# Adding project files
+COPY . .
 
-RUN yarn install --check-files
-
-COPY . ./
+RUN bundle exec rake assets:precompile
 
 EXPOSE 3000
 

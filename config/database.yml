@@ -14,23 +14,22 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  database: <%= ENV['DATABASE_NAME'] %>
-  username: <%= ENV['DATABASE_USER'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  port: <%= ENV['DATABASE_PORT'] || '5432' %>
-  host: <%= ENV['DATABASE_HOST'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+default: &default  
+  adapter: postgresql  
+  encoding: unicode  
+  username: postgres  
+  password:  
+  pool: 5  
+  host: db 
 
 development:
   <<: *default
+  database: covid19_test_development
 
 test:
   <<: *default
   database: covid19_test
 
-production:
-  <<: *default
+production:  
+  <<: *default  
+  database: covid19_test_production

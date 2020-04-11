@@ -1,38 +1,22 @@
 version: '3.4'
-
-services:
-  app: 
-    build:
-      context: .
-      dockerfile: docker/app/Dockerfile
-    depends_on:     
-      - database
-    ports: 
-      - "3000:3000"
-    volumes:
-      - .:/app
-      - gem_cache:/usr/local/bundle/gems
-      - node_modules:/app/node_modules
-    env_file: .env
-    environment:
-      RAILS_ENV: development
-
-  database:
-    image: postgres:12.1
-    volumes:
-      - db_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-
-  web:
-    build:
-      context: .
-      dockerfile: docker/web/Dockerfile
-    depends_on:
-      - app
-    ports:
+volumes:  
+  postgres_data: {} 
+services:  
+  app:    
+    build:      
+      context: .      
+      dockerfile: ./docker/app/DockerFile    
+    depends_on:      
+      - db  
+  db:    
+    image: postgres    
+    volumes:      
+      - postgres_data:/var/lib/postgresql/data  
+  web:    
+    build:      
+      context: .      
+      dockerfile: ./docker/web/DockerFile    
+    depends_on:      
+      - app    
+    ports:      
       - 80:80
-
-volumes:
-  gem_cache:
-  db_data:
-  node_modules:
