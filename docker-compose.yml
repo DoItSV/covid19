@@ -1,6 +1,4 @@
 version: '3.4'
-volumes:  
-  postgres_data: {} 
 services:  
   app:    
     build:      
@@ -9,9 +7,10 @@ services:
     depends_on:      
       - db  
   db:    
-    image: postgres    
+    image: postgres:12.1    
     volumes:      
-      - postgres_data:/var/lib/postgresql/data  
+      - db_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
   web:    
     build:      
       context: .      
@@ -20,3 +19,8 @@ services:
       - app    
     ports:      
       - 80:80
+volumes:
+  gem_cache:
+  db_data:
+  node_modules:
+
