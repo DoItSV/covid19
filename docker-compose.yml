@@ -1,26 +1,25 @@
 version: '3.4'
-services:  
-  app:    
-    build:      
-      context: .      
-      dockerfile: ./docker/app/DockerFile    
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:      
-      - db  
-  db:    
-    image: postgres:12.1    
-    volumes:      
+      - db
+  db:
+    image: postgres:12.1
+    volumes:
       - db_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-  web:    
-    build:      
-      context: .      
-      dockerfile: ./docker/web/DockerFile    
-    depends_on:      
-      - app    
-    ports:      
+  web:
+    build:
+      context: .
+      dockerfile: dockerfile_web
+    depends_on:
+      - app
+    ports:
       - 80:80
 volumes:
   gem_cache:
   db_data:
   node_modules:
-
